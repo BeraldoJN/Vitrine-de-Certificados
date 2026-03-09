@@ -1,0 +1,94 @@
+/* BASE DO SITE */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: #f4f7f6;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    text-align: center;
+    padding: 50px 20px;
+    background: #24292e;
+    color: white;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.grid-certificados {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.card:hover { transform: translateY(-5px); }
+
+.foto-certificado img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 1px solid #eee;
+}
+
+.info { padding: 20px; }
+.info h3 { font-size: 1.1rem; margin-bottom: 8px; color: #24292e; }
+.info p { font-size: 0.9rem; color: #666; }
+
+footer { text-align: center; padding: 40px; color: #888; }
+
+/* EFEITO ZOOM (MODAL) */
+body:has(dialog[open]) { overflow: hidden; }
+#modal-zoom {
+    border: none;
+    background: transparent;
+    max-width: 90vw; 
+    max-height: 90vh; 
+    margin: auto;
+    padding: 0;
+    overflow: visible; 
+}
+#modal-zoom::backdrop {
+    background-color: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(5px);
+}
+#modal-img {
+    width: 100%;
+    height: auto;
+    max-height: 90vh;
+    object-fit: contain; 
+    border-radius: 8px;
+    border: 4px solid white;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+#close-modal {
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    background: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.cert-img { cursor: pointer; }
