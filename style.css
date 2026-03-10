@@ -92,3 +92,15 @@ body:has(dialog[open]) { overflow: hidden; }
     justify-content: center;
 }
 .cert-img { cursor: pointer; }
+.footer-links a {
+    font-size: 2rem; /* Tamanho do ícone */
+    color: #555;     /* Cor neutra inicial */
+    margin: 0 15px;
+    transition: transform 0.3s, color 0.3s;
+}
+
+/* Efeito de hover (interatividade) */
+.footer-links a:hover {
+    transform: translateY(-5px); /* O ícone "sobe" um pouco */
+    color: #0077b5;              /* Cor do LinkedIn ao passar o mouse */
+}
