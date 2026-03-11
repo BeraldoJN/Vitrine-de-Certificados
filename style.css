@@ -1,4 +1,4 @@
-/* BASE DO SITE */
+
 * {
     margin: 0;
     padding: 0;
@@ -54,7 +54,7 @@ header {
 
 footer { text-align: center; padding: 40px; color: #888; }
 
-/* EFEITO ZOOM (MODAL) */
+
 body:has(dialog[open]) { overflow: hidden; }
 #modal-zoom {
     border: none;
@@ -93,21 +93,21 @@ body:has(dialog[open]) { overflow: hidden; }
 }
 .cert-img { cursor: pointer; }
 .footer-links a {
-    font-size: 2rem; /* Tamanho do ícone */
-    color: #555;     /* Cor neutra inicial */
+    font-size: 2rem; 
+    color: #555;     
     margin: 0 15px;
     transition: transform 0.3s, color 0.3s;
 }
 
-/* Efeito de hover (interatividade) */
+
 .footer-links a:hover {
-    transform: translateY(-5px); /* O ícone "sobe" um pouco */
-    color: #0077b5;              /* Cor do LinkedIn ao passar o mouse */
+    transform: translateY(-5px); 
+    color: #0077b5;              
 }
 
-/* Melhora no container da imagem para não cortar o certificado */
+
 .foto-certificado {
-    background-color: #f9f9f9; /* Fundo neutro para certificados com proporções diferentes */
+    background-color: #f9f9f9; 
     display: flex;
     align-items: center;
     justify-content: center;
@@ -115,25 +115,24 @@ body:has(dialog[open]) { overflow: hidden; }
 }
 
 .foto-certificado img {
-    width: 90%; /* Deixa um pequeno respiro nas bordas */
+    width: 90%; 
     height: 90%;
-    object-fit: contain; /* Exibe o certificado completo */
+    object-fit: contain; 
     border-bottom: none;
 }
 
-/* Card mais moderno */
 .card {
-    border: 1px solid #e1e4e8; /* Borda fina estilo GitHub */
+    border: 1px solid #e1e4e8; 
     box-shadow: 0 2px 8px rgba(0,0,0,0.05);
 }
 
 .card:hover {
     transform: translateY(-8px);
     box-shadow: 0 12px 24px rgba(0,0,0,0.1);
-    border-color: #0077b5; /* Cor de destaque no hover */
+    border-color: #0077b5; 
 }
 
-/* Badge de categoria (Opcional) */
+
 .info h3 {
     display: flex;
     flex-direction: column;
