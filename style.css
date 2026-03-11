@@ -104,3 +104,49 @@ body:has(dialog[open]) { overflow: hidden; }
     transform: translateY(-5px); /* O ícone "sobe" um pouco */
     color: #0077b5;              /* Cor do LinkedIn ao passar o mouse */
 }
+
+/* Melhora no container da imagem para não cortar o certificado */
+.foto-certificado {
+    background-color: #f9f9f9; /* Fundo neutro para certificados com proporções diferentes */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+}
+
+.foto-certificado img {
+    width: 90%; /* Deixa um pequeno respiro nas bordas */
+    height: 90%;
+    object-fit: contain; /* Exibe o certificado completo */
+    border-bottom: none;
+}
+
+/* Card mais moderno */
+.card {
+    border: 1px solid #e1e4e8; /* Borda fina estilo GitHub */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.1);
+    border-color: #0077b5; /* Cor de destaque no hover */
+}
+
+/* Badge de categoria (Opcional) */
+.info h3 {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.info h3::after {
+    content: "Certificado";
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    background: #e1f5fe;
+    color: #01579b;
+    padding: 2px 8px;
+    border-radius: 4px;
+    width: fit-content;
+}
